@@ -10,9 +10,9 @@ function App() {
     <div className="app">
       <Header />
       <Routes>
-        <Route path='/cryptotracker' element={<Home />} />
-        <Route path='/cryptotracker/coins' element={<CoinDetail />}>
-          <Route path=':id' element={CoinDetail}></Route>
+        <Route path='/' exact element={<Home />} />
+        <Route path='coins' element={<CoinDetail />}>
+          <Route path=':id' element={<CoinDetail />}></Route>
         </Route>
       </Routes>
     </div>

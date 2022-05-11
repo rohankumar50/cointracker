@@ -3,6 +3,7 @@ import './navbar.css'
 import { FaBitcoin } from 'react-icons/fa'
 import { BiSearchAlt } from 'react-icons/bi'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
 
     // const URL = 'https://api.coingecko.com/api/v3/coins/list'
@@ -36,21 +37,23 @@ const Navbar = () => {
     return (
         <div id="navbar">
             <div className="nav">
-                <div className="logo">
-                    <h3>Coin Tracker</h3>
-                    <FaBitcoin className='site-logo' />
-                </div>
+                <Link to={'/'}>
+                    <div className="logo">
+                        <h3>Coin Tracker</h3>
+                        <FaBitcoin className='site-logo' />
+                    </div>
+                </Link>
                 <div className="navSearchBox">
                     <div className="search">
                         <BiSearchAlt className='icon' />
                         <input type="text" placeholder='Search' className='search-box' onChange={handleFilter} />
                     </div>
                     {
-                        filerData.length != 0 && (
+                        filerData.length !== 0 && (
                             <div className="dataresult">
                                 {filerData.slice(0, 10).map((value) => {
                                     return (
-                                        <a className='dataItem' href={"/coins/" + value.id} >
+                                        <a className='dataItem' href={"#/coins/" + value.id} target="_blank">
                                             <p>
                                                 {
                                                     value.name

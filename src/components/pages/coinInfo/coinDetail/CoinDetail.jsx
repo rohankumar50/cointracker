@@ -10,8 +10,7 @@ const CoinDetail = () => {
     const [coinData, setCoinData] = useState([]);
     const [loading, setLoading] = useState(false);
     const params = useParams();
-    console.log(params);
-    const URL = `https://api.coingecko.com/api/v3/coins/${params.id}?localization=en&market_data=true&sparkline=true`
+    const URL = `https://api.coingecko.com/api/v3/coins/${params.id}?localization=en&market_data=true&sparkline=true`;
 
     useEffect(() => {
         axios.get(URL).then((response) => {
@@ -41,6 +40,7 @@ const CoinDetail = () => {
                                 </div>
                             </div>
                             <div className="details_price">
+
                                 <div className="price_in_inr">
                                     <p className='tag_text'>PRICE IN INR</p>
                                     <p>{coinData.market_data ? coinData.market_data.current_price.inr : null} &#x20B9;</p>
@@ -55,6 +55,7 @@ const CoinDetail = () => {
                                 </div>
                             </div>
                             <div className="mkt">
+                                <h6>History</h6>
                                 <div className="mkt_24h_change">
                                     <p className='tag_text'>24h CHANGE</p>
                                     <p>{coinData.market_data ? coinData.market_data.price_change_24h_in_currency.inr : null}</p>

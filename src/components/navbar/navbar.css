@@ -89,3 +89,18 @@
 .dataItem p {
   margin-left: 10px;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navSearchBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: unset;
+    margin-top: 1rem;
+  }
+}
