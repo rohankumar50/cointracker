@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/zxc/static/css/main.82f0d865.css",
-    "main.js": "/zxc/static/js/main.16ea903a.js",
-    "index.html": "/zxc/index.html",
-    "main.82f0d865.css.map": "/zxc/static/css/main.82f0d865.css.map",
-    "main.16ea903a.js.map": "/zxc/static/js/main.16ea903a.js.map"
+    "main.css": "/cointracker/static/css/main.47ea85a5.css",
+    "main.js": "/cointracker/static/js/main.b1f1b52b.js",
+    "index.html": "/cointracker/index.html",
+    "main.47ea85a5.css.map": "/cointracker/static/css/main.47ea85a5.css.map",
+    "main.b1f1b52b.js.map": "/cointracker/static/js/main.b1f1b52b.js.map"
   },
   "entrypoints": [
-    "static/css/main.82f0d865.css",
-    "static/js/main.16ea903a.js"
+    "static/css/main.47ea85a5.css",
+    "static/js/main.b1f1b52b.js"
   ]
 }
