@@ -25,6 +25,13 @@ const Navbar = () => {
         }
     }
 
+    window.addEventListener('mouseup', function (event) {
+        var box = this.document.getElementById('box');
+        if (event.target != box && event.target.parentNode != box) {
+            box.style.display = 'none'
+        }
+    })
+
 
     useEffect(() => {
         axios.get(URL).then((response) => {
@@ -50,7 +57,7 @@ const Navbar = () => {
                     </div>
                     {
                         filerData.length !== 0 && (
-                            <div className="dataresult">
+                            <div className="dataresult" id='box'>
                                 {filerData.slice(0, 10).map((value) => {
                                     return (
                                         <a className='dataItem' href={"#/coins/" + value.id} target="_blank">
